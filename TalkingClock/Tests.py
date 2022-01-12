@@ -8,7 +8,7 @@ from TalkingClock.Solution import IncorrectTimeFormatException, check_time_forma
 
 class MakeClockTalkTest(unittest.TestCase):
     def test_make_clock_talk(self):
-        # cases - e.g.:
+        # cases - e.g. :
         #   - 11:00 --> "Eleven o'clock"
         #   - 10:23 --> "Twenty-three past ten"
         #   - 10:55 --> "Five to eleven"
