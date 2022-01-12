@@ -25,7 +25,7 @@ class MakeClockTalkTest(unittest.TestCase):
             self.assertEqual(expected_texts[i], make_clock_talk(now=time, json=""))
 
 
-    @mock.patch('TalkClock.extract_time')
+    @mock.patch('TalkingClock.TalkClock.extract_time')
     def test_make_clock_talk_json_off(self, extract_time_mock):
         extract_time_mock.return_value = "23:12", "23", "12"
         now = extract_time_mock.return_value[0]
@@ -35,8 +35,8 @@ class MakeClockTalkTest(unittest.TestCase):
         self.assertEqual(expected_friendly_time, make_clock_talk(now=now, json=""))
         self.assertNotEqual(expected_friendly_time, make_clock_talk(now=now, json="on"))
 
-    @mock.patch('TalkClock.convert_to_json')
-    @mock.patch('TalkClock.extract_time')
+    @mock.patch('TalkingClock.TalkClock.convert_to_json')
+    @mock.patch('TalkingClock.TalkClock.extract_time')
     def test_make_clock_talk_json_on(self, extract_time_mock, convert_to_json_mock):
         extract_time_mock.return_value = "23:45", "23", "45"
         now = extract_time_mock.return_value[0]

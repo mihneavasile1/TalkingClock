@@ -51,3 +51,8 @@ This will return something like:
 
 If you encounter `ModuleNotFoundError` run:
 `export PYTHONPATH="${PYTHONPATH}:~/TalkingClockLloyds/TalkingClock/"`
+
+### To run the tests:
+```
+python -m unittest TalkingClock/test/Tests.py
+```
