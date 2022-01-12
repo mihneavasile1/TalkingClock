@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+import argparse
 from datetime import datetime
 from flask import Flask
 from flask_restful import Resource, Api
 
-from TalkingClock.Solution import make_clock_talk
+from TalkingClock.TalkClock import make_clock_talk
 
 # if ModuleNotFoundError run:
 # export PYTHONPATH="${PYTHONPATH}:~/TalkingClockLloyds/TalkingClock/"
