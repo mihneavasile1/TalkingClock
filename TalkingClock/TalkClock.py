@@ -39,7 +39,6 @@ def make_clock_talk(now, json):
 
     hour = hour_lookup[p.number_to_words(current_hour)]
     minutes = p.number_to_words(current_min)
-    print(current_time)  # , " | ", hour.capitalize(), minutes)
 
     if int(current_min) == 0:
         return convert_to_json(hour.capitalize() + " o'clock", json)
@@ -68,8 +67,6 @@ def convert_to_json(time, json):
 
 
 def check_time_format(time):
-    # x = re.findall("[1-2][0-9]:[0-9]{2}", time)
-    # x = re.findall("[0-2][0-9]:[0-9]{2}", time)
     x = re.findall("[0-2]?[0-9]:[0-9]{2}", time)
 
     if len(x) == 0:

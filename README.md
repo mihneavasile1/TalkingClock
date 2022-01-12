@@ -32,6 +32,7 @@ You can use any string other than the empty string to set the `-j` flag (e.g. `-
 ### To start the REST service run: Covers task three 
 
 ```
+export PYTHONPATH="${PYTHONPATH}:~/TalkingClockLloyds/TalkingClock/"
 ./TalkingClock/REST_service.py
 ```
 
@@ -48,5 +49,5 @@ This will return something like:
 ```
 
 
-If you enounter `ModuleNotFoundError` run:
+If you encounter `ModuleNotFoundError` run:
 `export PYTHONPATH="${PYTHONPATH}:~/TalkingClockLloyds/TalkingClock/"`
